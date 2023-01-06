@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="" type="text/css">
+    <script type="text/javascript" src=""></script>
+
+</head>
+<body>
+<p id="js">JavaScript</p>
+<div id="list">
+    <p id="se">JavaSE</p>
+    <p id="ee">JavaEE</p>
+    <p>JavaMe</p>
+</div>
+
+<script>
+    'use strict'
+
+    let js = document.getElementById('js');
+    let list =document.getElementById('list');
+    // list.appendChild(js); // 追加
+
+    let ee = document.getElementById('ee');
+    // list.insertBefore(js, ee); // 往 ee 前面插入一个节点
+    // element.insertAdjacentHTML(position, text);
+    // position是相对于元素的位置，并且必须是以下字符串之一：
+    // beforebegin: 元素自身的前面。
+    // afterbegin: 插入元素内部的第一个子节点之前。
+    // beforeend: 插入元素内部的最后一个子节点之后。
+    // afterend: 元素自身的后面。
+    // text是要被解析为HTML或XML,并插入到DOM树中的字符串。
+
+    // 通过 JS 创建一个新的节点
+    let newP = document.createElement('p');
+    newP.id = 'newP';
+    newP.innerText = 'Hello, World!';
+    newP.style.color = 'red';
+    list.appendChild(newP);
+
+    // let body = document.getElementsByTagName('body').item(0);
+    // body.style.backgroundColor = 'red';
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="" type="text/css">
+    <script type="text/javascript" src=""></script>
+
+</head>
+<body>
+
+<form>
+    <p>
+        <span>用户名：</span> <input type="text" id="username">
+    </p>
+
+    <p>
+        <span>性别：</span>
+        <input type="radio" name="sex" value="man" id="body" checked="true"> 男
+        <input type="radio" name="sex" value="woman" id="girl"> 女
+    </p>
+</form>
+
+<script>
+    'use strict'
+
+    let usernameInput = document.getElementById('username');
+    usernameInput.value = "223"
+
+    let bodyRadio = document.getElementById('body');
+    let girlRadio = document.getElementById('girl');
+    console.log(bodyRadio.checked);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script>
+        function ab() {
+            var x = 1;
+            x = x + 1;
+        }
+        x = x + 1; // Uncaught ReferenceError: x is not defined
+    </script>-->
+
+    <script>
+        'use strict'
+
+        /**
+         * 默认所有的全局变量，都会自动绑定在windows对象下
+         */
+        // 全局变量
+        var x= '111';
+
+        // 唯一全局变量
+        var wyyApp = {}
+
+        // 定义全局变量
+        wyyApp.name = "tom";
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

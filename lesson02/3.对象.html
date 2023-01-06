@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         * JS 对象定义
+         * JS中的所有键都是字符串，值是任意对象！
+         * 1.对象赋值
+         * 对象.属性=新值
+         * 2.使用一个不存在的对象属性，不会报错！ undefined
+         * 3.动态的删除属性，通过delete
+         * delete 对象.属性
+         * 4.动态添加属性，直接给新的属性添加值即可
+         * 对象.新属性=新值
+         * 5.判断属性是否在这个对象中 '属性' in 对象
+         * 'age' in person
+         * 'toString' in person
+         * 6.判断一个属性是否是这个对象自身拥有的 hasOwnProperty('x')
+         * person.hasOwnProperty('toString') // false
+         * person.hasOwnProperty('age') // true
+         * @type {{name: null, age: number}}
+         */
+        let person = {
+            name: null,
+            age: 0
+        }
+        person.hasOwnProperty()
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

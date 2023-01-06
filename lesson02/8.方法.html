@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        'use strict'
+
+        // 1
+        // let person = {
+        //     name: 'Tom',
+        //     birth: 2000,
+        //     age: function () {
+        //         // 今年 - 出生年
+        //        return new Date().getFullYear() - this.birth;
+        //     }
+        // }
+
+        // 2
+        function getAge() {
+            return new Date().getFullYear() - this.birth;
+        }
+        let person = {
+            name: 'Tom',
+            birth: 2000,
+            age: getAge
+        }
+
+        getAge.apply(person); // this, 指向了person
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

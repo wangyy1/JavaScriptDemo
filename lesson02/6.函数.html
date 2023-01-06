@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        /**
+         * 函数
+         * 如果没有执行return,函数执行完也会返回结果，结果是undefined
+         * 参数：JS可以传任意个参数，也可以不传参数
+         * arguments 可以获取传递进来的所有参数
+         * ...rest 定义多余参数
+         */
+        // 方式一
+/*        function abs(x) {
+            if (x >= 0) {
+                return x;
+            } else {
+                return -x;
+            }
+        }*/
+
+        // 方式二 匿名函数，可以把结果赋值给[变量]，通过[变量]就可以调用函数!
+
+        /**
+         * 手动抛出异常
+         * if (typeof x !== 'number') {
+         *       throw "自定义 not a number"
+         * }
+         */
+        // let abs = function (x) {
+        //     if (x >= 0) {
+        //         return x;
+        //     } else {
+        //         return -x;
+        //     }
+        // }
+
+        function a(a,b,...rest) {
+            console.log("a => " + a );
+            console.log("b => " + b);
+            console.log(rest);
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

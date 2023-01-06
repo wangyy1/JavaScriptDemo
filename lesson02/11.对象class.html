@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        'use strict'
+
+        class Student {
+            constructor(name) {
+                this.name = name;
+            }
+            hello =function () {
+                alert('hello')
+            }
+        }
+
+        let student1 = new Student("111");
+
+        // 继承
+        class XStudent extends Student {
+            constructor(name, grade) {
+                super(name);
+                this.grade = grade;
+            }
+
+            myGrade() {
+                alert('小学生')
+            }
+        }
+
+        let student2 = new XStudent('222', 3);
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="lib/jquery-3.6.3.js"></script>
+
+    <style>
+        #divMove{
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+<!-- 获取鼠标的移动轨迹 -->
+mouse:  <span id="mouseMove"></span>
+
+<div id="divMove">
+    在这里移动鼠标
+</div>
+
+<script>
+    // jQuery 文档 https://jquery.cuishifeng.cn/
+
+    // 网页元素加载完毕后，响应事件
+    $(function (){
+        $('#divMove').mousemove(function (param) {
+            $('#mouseMove').text('X: ' + param.pageX + ' Y: ' + param.pageY)
+        });
+    });
+
+    $(window).mousem
+
+</script>
+
+</body>
+</html>
