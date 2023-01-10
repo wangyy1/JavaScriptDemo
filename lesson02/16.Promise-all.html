@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        'use strict'
+        function p1(){
+            var promise1 = new Promise(function(resolve,reject){
+                console.log("p1的第一条输出语句");
+                console.log("p1的第二条输出语句");
+                setTimeout(()=>{
+                    resolve("p1完成");
+                },2000);
+
+            })
+            return promise1;
+        }
+
+        function p2(){
+            var promise2 = new Promise(function(resolve,reject){
+                console.log("p2的第一条输出语句");
+                setTimeout(()=>{console.log("p2的第二条输出语句");resolve("p2完成")},2000);
+
+            })
+            return promise2;
+        }
+
+        function p3(){
+            var promise3 = new Promise(function(resolve,reject){
+                console.log("p3的第一条输出语句");
+                console.log("p3的第二条输出语句");
+                resolve("p3完成")
+            });
+            return  promise3;
+        }
+
+        // 等到所有任务都执行完才返回
+        // Promise.all([p1(), p2(), p3()]).then(function (data) {
+        //     console.log(data)
+        // })
+
+        // 只返回任务执行快的，执行的结果
+        Promise.race([p1(),p2(),p3()]).then(function(data){
+            console.log(data);
+        })
+
+        console.log("main")
+    </script>
+
+</head>
+<body>
+<dl>
+    <dt></dt>
+</dl>
+</body>
+</html>

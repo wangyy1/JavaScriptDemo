@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        'use strict'
+
+        // 1.变量声明并且赋值时的解构
+        let arr = ["孙悟空", "猪八戒", "沙和尚"]
+        let [a, b, c] = arr
+        console.log(a, b, c)
+
+        // 2.默认值, 预先设置默认值j = 1
+        let [g, h, i, j = 1] = [1, 2, 3];
+        console.log(g, h, i, j)
+
+        // 3.剩余数组赋值给一个变量
+        let [n1, n2, ...n3] = [1, 2, 3, 4, 5, 6, 7]
+        console.log(n1, n2, n3)
+
+        // 4.解构交换变量
+        let a1 = 10;
+        let a2 = 20;
+
+        let temp = a1;
+        a1 = a2;
+        a2 = temp;
+        //这个是我们常规的操作
+        [a1, a2] = [a2, a1];//这样的解构能实现交换
+        //表达式左边与右边表示的意义不一样，左边表示的是变量，右边才表示的是值，所以可以通过这种方式实现变量值交换
+
+        const arr1 = ["孙悟空", "猪八戒"]
+        arr1[0], arr1[1] = [arr1[1], arr1[0]]//完成两个数组元素交换变量
+
+        // 5.解析一个函数返回的数组
+        function f() {
+            return [1, 2]
+        }
+
+        let a3, b3;
+        [a3, b3] = f();
+        console.log("a3 =", a3, "b3 =", b3)
+
+        // 6.二维数组的解构
+        const arr3 = [[1, 2, 3], [4, 5, 6]]
+        console.log(arr3)
+
+        // 假如我们要解构一个二维数组
+        let [[num1, num2, num3], [num4, num5, num6]] = arr3
+        console.log("num1-num6", num1, num2, num3, num4, num5, num6)
+        // 将num1-6分别对应二维数组的六个元素
+        // let arr4 = []
+        //    let [[num1, num2, num3], arr4] = arr3//将num1,num2,num3为1，2，3，arr4为[4,5,6]
+        // console.log("num1-num3", num1, num2, num3, "arr4", arr4)
+
+    </script>
+
+</head>
+<body>
+<dl>
+    <dt></dt>
+</dl>
+</body>
+</html>

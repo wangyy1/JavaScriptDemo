@@ -34,7 +34,22 @@ mouse:  <span id="mouseMove"></span>
         });
     });
 
-    $(window).mousem
+    let a = 10n;
+
+
+    const fn = (a) => {
+        console.log('a = ', a);
+    }
+
+    const fn2 = a => {
+        console.log('a = ', a);
+    }
+
+    const fn2 = (a=10, b=20, c=30) => a+b+c
+
+    const fn3 = () => {
+        return {name: "11"}
+    }
 
 </script>
 

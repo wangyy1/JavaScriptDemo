@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        'use strict'
+        let promise = new Promise(function (resolve, reject) {
+            // setTimeout(function () {
+            //     console.log("Hello World")
+            // }, 2000);
+            console.log(resolve, reject)
+            // resolve("成功")
+            throw "111"
+            // reject("失败")
+        })
+        promise.then(function (p) {
+            console.log("p =", p)
+        },function (p) {
+            console.log("p2 =", p)
+        }).catch(function (p) {
+            console.log("catch =", p)
+        })
+
+
+
+        console.log("main")
+    </script>
+
+</head>
+<body>
+<dl>
+    <dt></dt>
+</dl>
+</body>
+</html>
