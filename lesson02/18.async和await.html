@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="module">
+        'use strict'
+
+        function sleep(time) {
+            let timeStamp = new Date().getTime();
+            let endTime = timeStamp + time;
+            while (true) {
+                if (new Date().getTime() > endTime) {
+                    return;
+                }
+            }
+        }
+
+        async function fn2(){
+            sleep(5000)
+            return 10
+        }
+
+        try {
+            console.log("fn2 开始");
+            let result = await fn2();
+            console.log(result);
+        } catch (e) {
+            console.log(e);
+        }
+
+    </script>
+
+</head>
+<body>
+<dl>
+    <dt></dt>
+</dl>
+</body>
+</html>
